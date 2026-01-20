@@ -76,3 +76,16 @@ function sendEmail() {
   // Use window.open for better browser support
   window.open(mailtoLink, '_self');
 }
+
+function toggleMenu() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('active');
+}
+
+document.querySelectorAll('#mobileMenu a').forEach(link => {
+  link.addEventListener('click', () => {
+    document.getElementById('mobileMenu').classList.remove('active');
+  });
+});
+
+
